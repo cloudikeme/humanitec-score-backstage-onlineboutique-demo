@@ -1,8 +1,8 @@
 apiVersion: scaffolder.backstage.io/v1beta3
 kind: Template
 metadata:
-  name: ikeme-dbaas-node-service-template
-  title: Ikeme DbaaS NodeJS Service Template
+  name: onlineboutique-microservices-template
+  title: Online Boutique Microservices Template
   description: An example template that creates a simple Hello World service with a DbaaS
   tags:
     - score
@@ -12,7 +12,7 @@ spec:
   type: service
 
   parameters:
-    - title: New DBaaS NodeJS Service
+    - title: New Online Boutique Microservices
       required:
         - componentName
       properties:
