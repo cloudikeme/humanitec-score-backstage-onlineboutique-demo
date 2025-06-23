@@ -1,0 +1,1 @@
+FROM us-central1-docker.pkg.dev/google-samples/microservices-demo/checkoutservice:v0.10.3
