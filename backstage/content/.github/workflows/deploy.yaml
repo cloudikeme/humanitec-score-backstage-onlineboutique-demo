@@ -144,7 +144,7 @@ jobs:
             --org ${{ vars.HUMANITEC_ORG_ID }} \
             --app ${{ env.APP_NAME }} \
             --env 5min-local \
-            -f score.yaml \
+            -f score.deploy.yaml \
             --extensions humanitec.score.yaml \
             --workload-source-url "https://github.com/${{ github.repository }}/blob/${{ github.ref_name }}/score.yaml" \
             --image $CONTAINER_REGISTRY/$IMAGE:$TAG \
