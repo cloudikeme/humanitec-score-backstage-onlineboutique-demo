@@ -46,7 +46,20 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        apps: ["ad", "cart", "checkout", "currency", "email", "frontend", "loadgenerator", "payment", "productcatalog", "recommendation", "shipping"]
+        src:
+          - ad
+          - cart
+          - checkout
+          - currency
+          - docs
+          - email
+          - frontend
+          - loadgenerator
+          - payment
+          - productcatalog
+          - recommendation
+          - shipping
+      fail-fast: false
     permissions:
       id-token: write
       contents: read
@@ -111,14 +124,15 @@ jobs:
 {%- elif values.cloudProvider === "5min" -%}
 {% raw %}
       - name: Define 5min registry
-        strategy:
-          matrix:
-            apps: ["ad", "cart", "checkout", "currency", "email", "frontend", "loadgenerator", "payment", "productcatalog", "recommendation", "shipping"]
         run: |
           echo "CONTAINER_REGISTRY=localhost:5001" >> "$GITHUB_ENV"
 {% endraw %}
 {% endif %}
 {% raw %}
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+        with:
+          driver-opts: network=host
       - run: docker build . -t $CONTAINER_REGISTRY/$IMAGE:$TAG
       - run: docker push $CONTAINER_REGISTRY/$IMAGE:$TAG
 
@@ -132,7 +146,7 @@ jobs:
             --token ${{ secrets.HUMANITEC_TOKEN }} \
             --org ${{ vars.HUMANITEC_ORG_ID }} \
             -t container \
-            -n $CONTAINER_REGISTRY/$IMAGE \
+            -n $CONTAINER_REGISTRY/${{ matrix.src }} \
             --version $TAG \
             --ref $GITHUB_REF \
             --commit $GITHUB_SHA
@@ -141,14 +155,14 @@ jobs:
         run: |
           humctl api POST /orgs/${{ vars.HUMANITEC_ORG_ID }}/apps/${{ env.APP_NAME }}/envs \
             -d '{ "id": "5min-local", "name": "5min-local", "type": "5min-local" }' \
-            --token ${{ secrets.HUMANITEC_TOKEN }}
+            --token ${{ secrets.HUMANITEC_TOKEN }} || true
           humctl score deploy \
             --token ${{ secrets.HUMANITEC_TOKEN }} \
             --org ${{ vars.HUMANITEC_ORG_ID }} \
             --app ${{ env.APP_NAME }} \
             --env 5min-local \
-            --deploy-config apps/score.deploy.yaml \
-            --extensions humanitec.score.yaml \
+            -f ${{ matrix.src }}/score.yaml \
+            --extensions ${{ matrix.src }}/humanitec.score.yaml \
             --workload-source-url "https://github.com/${{ github.repository }}/blob/${{ github.ref_name }}/score.yaml" \
             --image $CONTAINER_REGISTRY/$IMAGE:$TAG \
             --message "${{ github.event.head_commit.message }}"
