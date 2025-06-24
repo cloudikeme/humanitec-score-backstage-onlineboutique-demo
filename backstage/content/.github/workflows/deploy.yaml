@@ -162,7 +162,6 @@ jobs:
             --app ${{ env.APP_NAME }} \
             --env 5min-local \
             --deploy-config src/score.deploy.yaml \
-            --workload-source-url "https://github.com/${{ github.repository }}/blob/${{ github.ref_name }}/score.yaml" \
-            --image $CONTAINER_REGISTRY/$IMAGE:$TAG \
+            --workload-source-url "https://github.com/${{ github.repository }}/blob/${{ github.ref_name }}/${{ matrix.service }}/score.yaml" \
             --message "${{ github.event.head_commit.message }}"
 {% endraw %}
