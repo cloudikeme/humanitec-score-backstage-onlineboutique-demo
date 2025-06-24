@@ -130,8 +130,18 @@ jobs:
 {% endif %}
 {% raw %}
       
-      - run: docker build ./src/${{ matrix.src }} -t $CONTAINER_REGISTRY/${{ matrix.src }}:$TAG
-      - run: docker push $CONTAINER_REGISTRY/${{ matrix.src }}:$TAG
+      - name: Build Docker image for ${{ matrix.service }}
+        run: |
+          BUILD_CONTEXT="./backstage/content/src/${{ matrix.service }}"
+          IMAGE="$CONTAINER_REGISTRY/${{ matrix.service }}:$TAG"
+          echo "Building $IMAGE"
+          docker build "$BUILD_CONTEXT" -t "$IMAGE"
+
+      - name: Push Docker image for ${{ matrix.service }}
+        run: |
+          IMAGE="$CONTAINER_REGISTRY/${{ matrix.service }}:$TAG"
+          echo "Pushing $IMAGE"
+          docker push "$IMAGE"
 
       - uses: humanitec/setup-cli-action@v1
         with:
