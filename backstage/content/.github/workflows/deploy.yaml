@@ -161,8 +161,7 @@ jobs:
             --org ${{ vars.HUMANITEC_ORG_ID }} \
             --app ${{ env.APP_NAME }} \
             --env 5min-local \
-            -f ${{ matrix.src }}/score.yaml \
-            --extensions ${{ matrix.src }}/humanitec.score.yaml \
+            --deploy-config src/score.deploy.yaml \
             --workload-source-url "https://github.com/${{ github.repository }}/blob/${{ github.ref_name }}/score.yaml" \
             --image $CONTAINER_REGISTRY/$IMAGE:$TAG \
             --message "${{ github.event.head_commit.message }}"
