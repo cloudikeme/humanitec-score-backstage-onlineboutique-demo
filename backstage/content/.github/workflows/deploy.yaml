@@ -111,6 +111,9 @@ jobs:
 {%- elif values.cloudProvider === "5min" -%}
 {% raw %}
       - name: Define 5min registry
+        strategy:
+          matrix:
+            apps: ["ad", "cart", "checkout", "currency", "email", "frontend", "loadgenerator", "payment", "productcatalog", "recommendation", "shipping"]
         run: |
           echo "CONTAINER_REGISTRY=localhost:5001" >> "$GITHUB_ENV"
 {% endraw %}
