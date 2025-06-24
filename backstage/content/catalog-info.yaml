@@ -3,12 +3,12 @@ apiVersion: backstage.io/v1alpha1
 kind: System
 metadata:
     annotations:
-        github.com/project-slug: Humanitec-DemoOrg/onlineboutique-demo
+        github.com/project-slug: cloudikeme/humanitec-score-microservices-idp-demo
     description: online-boutique
     links:
         - icon: github
           title: Repository
-          url: https://github.com/Humanitec-DemoOrg/onlineboutique-demo
+          url: https://github.com/cloudikeme/humanitec-score-microservices-idp-demo
     name: online-boutique
 spec:
     owner: user:guest
@@ -17,12 +17,12 @@ apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
     annotations:
-        github.com/project-slug: Humanitec-DemoOrg/onlineboutique-demo
+        github.com/project-slug: cloudikeme/humanitec-score-microservices-idp-demo
     description: ad
     links:
         - icon: github
           title: Repository
-          url: https://github.com/Humanitec-DemoOrg/onlineboutique-demo
+          url: https://github.com/cloudikeme/humanitec-score-microservices-idp-demo
     name: online-boutique-ad
     tags:
         - java
@@ -39,12 +39,12 @@ apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
     annotations:
-        github.com/project-slug: Humanitec-DemoOrg/onlineboutique-demo
+        github.com/project-slug: cloudikeme/humanitec-score-microservices-idp-demo
     description: cart
     links:
         - icon: github
           title: Repository
-          url: https://github.com/Humanitec-DemoOrg/onlineboutique-demo
+          url: https://github.com/cloudikeme/humanitec-score-microservices-idp-demo
     name: online-boutique-cart
     tags:
         - dotnet
@@ -63,12 +63,12 @@ apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
     annotations:
-        github.com/project-slug: Humanitec-DemoOrg/onlineboutique-demo
+        github.com/project-slug: cloudikeme/humanitec-score-microservices-idp-demo
     description: checkout
     links:
         - icon: github
           title: Repository
-          url: https://github.com/Humanitec-DemoOrg/onlineboutique-demo
+          url: https://github.com/cloudikeme/humanitec-score-microservices-idp-demo
     name: online-boutique-checkout
     tags:
         - golang
@@ -92,12 +92,12 @@ apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
     annotations:
-        github.com/project-slug: Humanitec-DemoOrg/onlineboutique-demo
+        github.com/project-slug: cloudikeme/humanitec-score-microservices-idp-demo
     description: currency
     links:
         - icon: github
           title: Repository
-          url: https://github.com/Humanitec-DemoOrg/onlineboutique-demo
+          url: https://github.com/cloudikeme/humanitec-score-microservices-idp-demo
     name: online-boutique-currency
     tags:
         - node
@@ -114,12 +114,12 @@ apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
     annotations:
-        github.com/project-slug: Humanitec-DemoOrg/onlineboutique-demo
+        github.com/project-slug: cloudikeme/humanitec-score-microservices-idp-demo
     description: email
     links:
         - icon: github
           title: Repository
-          url: https://github.com/Humanitec-DemoOrg/onlineboutique-demo
+          url: https://github.com/cloudikeme/humanitec-score-microservices-idp-demo
     name: online-boutique-email
     tags:
         - python
@@ -136,12 +136,12 @@ apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
     annotations:
-        github.com/project-slug: Humanitec-DemoOrg/onlineboutique-demo
+        github.com/project-slug: cloudikeme/humanitec-score-microservices-idp-demo
     description: frontend
     links:
         - icon: github
           title: Repository
-          url: https://github.com/Humanitec-DemoOrg/onlineboutique-demo
+          url: https://github.com/cloudikeme/humanitec-score-microservices-idp-demo
     name: online-boutique-frontend
     tags:
         - golang
@@ -170,12 +170,12 @@ apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
     annotations:
-        github.com/project-slug: Humanitec-DemoOrg/onlineboutique-demo
+        github.com/project-slug: cloudikeme/humanitec-score-microservices-idp-demo
     description: loadgenerator
     links:
         - icon: github
           title: Repository
-          url: https://github.com/Humanitec-DemoOrg/onlineboutique-demo
+          url: https://github.com/cloudikeme/humanitec-score-microservices-idp-demo
     name: online-boutique-loadgenerator
     tags:
         - python
@@ -192,12 +192,12 @@ apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
     annotations:
-        github.com/project-slug: Humanitec-DemoOrg/onlineboutique-demo
+        github.com/project-slug: cloudikeme/humanitec-score-microservices-idp-demo
     description: payment
     links:
         - icon: github
           title: Repository
-          url: https://github.com/Humanitec-DemoOrg/onlineboutique-demo
+          url: https://github.com/cloudikeme/humanitec-score-microservices-idp-demo
     name: online-boutique-payment
     tags:
         - node
@@ -214,12 +214,12 @@ apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
     annotations:
-        github.com/project-slug: Humanitec-DemoOrg/onlineboutique-demo
+        github.com/project-slug: cloudikeme/humanitec-score-microservices-idp-demo
     description: productcatalog
     links:
         - icon: github
           title: Repository
-          url: https://github.com/Humanitec-DemoOrg/onlineboutique-demo
+          url: https://github.com/cloudikeme/humanitec-score-microservices-idp-demo
     name: online-boutique-productcatalog
     tags:
         - golang
@@ -236,12 +236,12 @@ apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
     annotations:
-        github.com/project-slug: Humanitec-DemoOrg/onlineboutique-demo
+        github.com/project-slug: cloudikeme/humanitec-score-microservices-idp-demo
     description: recommendation
     links:
         - icon: github
           title: Repository
-          url: https://github.com/Humanitec-DemoOrg/onlineboutique-demo
+          url: https://github.com/cloudikeme/humanitec-score-microservices-idp-demo
     name: online-boutique-recommendation
     tags:
         - golang
@@ -260,12 +260,12 @@ apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
     annotations:
-        github.com/project-slug: Humanitec-DemoOrg/onlineboutique-demo
+        github.com/project-slug: cloudikeme/humanitec-score-microservices-idp-demo
     description: shipping
     links:
         - icon: github
           title: Repository
-          url: https://github.com/Humanitec-DemoOrg/onlineboutique-demo
+          url: https://github.com/cloudikeme/humanitec-score-microservices-idp-demo
     name: online-boutique-shipping
     tags:
         - golang

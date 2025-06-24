@@ -1,1 +1,0 @@
-FROM ghcr.io/score-spec/sample-score-app:latest
