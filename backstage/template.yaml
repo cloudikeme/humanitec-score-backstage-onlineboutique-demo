@@ -3,7 +3,7 @@ kind: Template
 metadata:
   name: onlineboutique-microservices-template
   title: Online Boutique Microservices Template
-  description: An example template that creates a simple Hello World service with a DbaaS
+  description: An Example Microservices App - OnlineBoutique
   tags:
     - score
     - humanitec
