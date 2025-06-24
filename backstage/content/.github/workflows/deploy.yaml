@@ -129,10 +129,6 @@ jobs:
 {% endraw %}
 {% endif %}
 {% raw %}
-      - name: Set up Docker Buildx
-        uses: docker/setup-buildx-action@v3
-        with:
-          driver-opts: network=host
       
       - run: docker build . /${{ matrix.src }} -t $CONTAINER_REGISTRY/${{ matrix.src }}:$TAG
       - run: docker push $CONTAINER_REGISTRY/${{ matrix.src }}:$TAG
