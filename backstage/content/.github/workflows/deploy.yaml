@@ -132,7 +132,7 @@ jobs:
       
       - name: Build Docker image for ${{ matrix.src }}
         run: |
-          BUILD_CONTEXT="./backstage/content/src/${{ matrix.src }}"
+          BUILD_CONTEXT="./src/${{ matrix.src }}"
           IMAGE="$CONTAINER_REGISTRY/${{ matrix.src }}:$TAG"
           echo "Building $IMAGE"
           docker build "$BUILD_CONTEXT" -t "$IMAGE"
