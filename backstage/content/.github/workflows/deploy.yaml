@@ -134,7 +134,7 @@ jobs:
         with:
           driver-opts: network=host
       
-      - run: docker build ./${{ matrix.src }} -t $CONTAINER_REGISTRY/${{ matrix.src }}:$TAG
+      - run: docker build . /${{ matrix.src }} -t $CONTAINER_REGISTRY/${{ matrix.src }}:$TAG
       - run: docker push $CONTAINER_REGISTRY/${{ matrix.src }}:$TAG
 
       - uses: humanitec/setup-cli-action@v1
