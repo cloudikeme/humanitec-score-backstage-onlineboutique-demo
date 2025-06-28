@@ -44,6 +44,7 @@ The platform engineer sets up the system to support developer self-service using
 
    * `catalog-info.yaml`
    * Direct Git registration (e.g., Gitea or GitHub)
+   * From the Backstage UI
 
 3. **Start PocketIDP (Local IDP Environment)**
 
