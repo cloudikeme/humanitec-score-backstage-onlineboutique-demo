@@ -137,10 +137,10 @@ This repo extends that foundation by:
 
 ```
 .
-├── score.yaml                         # Workload definition for Online Boutique
-├── humanitec-resource-definitions/   # Infrastructure mappings
-├── backstage-templates/              # Golden Path templates for each service
-├── .github/workflows/ci.yaml         # CI pipeline for validating Score workloads
+├── backstage/content/src/score.deploy.yaml                         # Workload definition for Online Boutique microservices
+├── res-des/   # Infrastructure mappings
+├── backstage/template.yaml             # Golden Path templates for each service
+├── .github/workflows/deploy.yaml         # CI pipeline for deploying Score workloads
 └── README.md                         # This file
 ```
 
